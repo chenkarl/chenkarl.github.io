@@ -181,7 +181,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -191,7 +191,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -257,7 +257,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-30T19:33:26+08:00">
                 2017-10-30
@@ -506,7 +506,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-27T23:02:06+08:00">
                 2017-10-27
@@ -626,7 +626,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-27T23:00:23+08:00">
                 2017-10-27
@@ -748,7 +748,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-27T22:43:42+08:00">
                 2017-10-27
@@ -869,7 +869,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-27T22:29:41+08:00">
                 2017-10-27
@@ -956,6 +956,10 @@ AsyncCallback  异步回调
 <p>9、</p>
 <h1 id="资源管理与序列化"><a href="#资源管理与序列化" class="headerlink" title="资源管理与序列化"></a>资源管理与序列化</h1><p>1、不及时清理内存会引起，当调用一个文件结束，如果没有及时释放资源，就不能再次使用这个文件了。<br>系统自带垃圾回收机制调用时间不定，资源使用不及时回收是对应用程序的极大浪费。<br>使用语法糖using关键字，简化文件流<br>using(FileStream fileStream = new FileStream(@”文件路径”)){}</p>
 <p>2、序列化定义：把对象转变成流。<br>相反过程我们称为反序列化。为无用字段标注为不可序列化。</p>
+<h1 id="异常与自定义异常"><a href="#异常与自定义异常" class="headerlink" title="异常与自定义异常"></a>异常与自定义异常</h1><p>1、用抛出错误异常代替返回错误码，同时在捕获异常的中所执行的代码确定不会再出错。</p>
+<p>2、正常的业务流程不应该使用异常来处理；<br>   不要总是尝试捕获异常或引发异常，而应该允许异常向调用堆栈往上传播。<br>引发异常情况：<br>第一类情况 如果运行代码后会造成内存泄漏，资源不可用，或者应用程序状态不可恢复，则引发异常。<br>第二类情况 在捕获异常的时候，如果需要包装一些更有用的信息，则引发异常。<br>第三类情况 如果底层异常在高层操作的上下文中没有意义，则可以考虑捕获这些底层异常并引发新的有意义的异常。</p>
+<p>3、重新引发新异常时，将底层异常作为新异常的参数向上传递，也就是使用Inner Exception</p>
+<p>4、避免在finally内撰写无效代码</p>
 
           
         
@@ -1033,7 +1037,7 @@ AsyncCallback  异步回调
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-27T22:28:41+08:00">
                 2017-10-27
@@ -1152,7 +1156,7 @@ AsyncCallback  异步回调
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-27T21:39:21+08:00">
                 2017-10-27
@@ -1285,7 +1289,7 @@ AsyncCallback  异步回调
                 <a href="/archives/">
               
                   <span class="site-state-item-count">7</span>
-                  <span class="site-state-item-name">Artikel</span>
+                  <span class="site-state-item-name">posts</span>
                 </a>
               </div>
             
@@ -1337,7 +1341,7 @@ AsyncCallback  异步回调
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
