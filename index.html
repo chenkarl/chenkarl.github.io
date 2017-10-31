@@ -181,7 +181,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Accueil
           </a>
         </li>
       
@@ -257,7 +257,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Posté le</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-30T19:33:26+08:00">
                 2017-10-30
@@ -506,7 +506,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Posté le</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-27T23:02:06+08:00">
                 2017-10-27
@@ -626,7 +626,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Posté le</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-27T23:00:23+08:00">
                 2017-10-27
@@ -748,7 +748,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Posté le</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-27T22:43:42+08:00">
                 2017-10-27
@@ -869,7 +869,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Posté le</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-27T22:29:41+08:00">
                 2017-10-27
@@ -956,10 +956,33 @@ AsyncCallback  异步回调
 <p>9、</p>
 <h1 id="资源管理与序列化"><a href="#资源管理与序列化" class="headerlink" title="资源管理与序列化"></a>资源管理与序列化</h1><p>1、不及时清理内存会引起，当调用一个文件结束，如果没有及时释放资源，就不能再次使用这个文件了。<br>系统自带垃圾回收机制调用时间不定，资源使用不及时回收是对应用程序的极大浪费。<br>使用语法糖using关键字，简化文件流<br>using(FileStream fileStream = new FileStream(@”文件路径”)){}</p>
 <p>2、序列化定义：把对象转变成流。<br>相反过程我们称为反序列化。为无用字段标注为不可序列化。</p>
-<h1 id="异常与自定义异常"><a href="#异常与自定义异常" class="headerlink" title="异常与自定义异常"></a>异常与自定义异常</h1><p>1、用抛出错误异常代替返回错误码，同时在捕获异常的中所执行的代码确定不会再出错。</p>
+<h1 id="异常与自定义异常"><a href="#异常与自定义异常" class="headerlink" title="异常与自定义异常"></a>异常与自定义异常</h1><ul>
+<li>异常会使代码运行终止</li>
+</ul>
+<p>1、用抛出错误异常代替返回错误码，同时在捕获异常的中所执行的代码确定不会再出错。</p>
 <p>2、正常的业务流程不应该使用异常来处理；<br>   不要总是尝试捕获异常或引发异常，而应该允许异常向调用堆栈往上传播。<br>引发异常情况：<br>第一类情况 如果运行代码后会造成内存泄漏，资源不可用，或者应用程序状态不可恢复，则引发异常。<br>第二类情况 在捕获异常的时候，如果需要包装一些更有用的信息，则引发异常。<br>第三类情况 如果底层异常在高层操作的上下文中没有意义，则可以考虑捕获这些底层异常并引发新的有意义的异常。</p>
 <p>3、重新引发新异常时，将底层异常作为新异常的参数向上传递，也就是使用Inner Exception</p>
 <p>4、避免在finally内撰写无效代码</p>
+<p>5、避免嵌套异常</p>
+<p>6、避免“吃掉异常”，如果不知道处理某个异常，千万不能吃掉异常，如果吃掉该向上传递的异常，这里就可能诞生一个Bug</p>
+<p>7、为循环增加Tester-Doer，而不是将try-catch置于循环内</p>
+<p>8、总是处理未捕获的异常</p>
+<p>9、应使用finally 避免资源泄露</p>
+<p>10、避免在调用栈较低的位置记录异常</p>
+<h1 id="异步，多线程，任务和并行"><a href="#异步，多线程，任务和并行" class="headerlink" title="异步，多线程，任务和并行"></a>异步，多线程，任务和并行</h1><p>1、应用场景：<br>多线程-计算密集型，消耗CPU资源<br><code>Thread t =new Thread(() =&gt; {业务代码})</code></p>
+<p>异步-IO密集型，进行内存读写 </p>
+<p>2、线程同步中使用信号量</p>
+<p>引用类型的等待机制分为：锁定-lock 和信号同步 </p>
+<p>类型的静态方法应当保证线程安全，非静态方法不需要实现线程安全</p>
+<p>3、线程分为前台与后台，区别在于前台线程不退出，应用程序的进程就会一直存在；后台线程无此限制，如果应用程序退出，后台线程会一并退出。<br>Tread线程默认创建是前台线程，线程池里默认是后台线程。<br>实际应更多使用后台线程，只有在执行事务或占有某些非托管资源需要释放时使用前台。</p>
+<p>4、线程不会立即启动。</p>
+<p>5、警惕线程的优先级。</p>
+<p>6、正确停止线程，应该由线程本身提供停止线程的接口和标识，线程检测到该标识，然后自己负责退出。</p>
+<p>7、应避免线程过多，即使必须线程，也可以考虑线程池技术，例如异步。</p>
+<p>8、使用ThreadPool或BackgroundWorker代替Thread<br><code>ThreadPool.QueueUserWorkItem((objState) =&gt; { // 工作代码},null);</code></p>
+<p>9、使用Task 代替 ThreadPool</p>
+<p>Task 提供属性，查看任务状态。</p>
+<p>10、 </p>
 
           
         
@@ -1037,7 +1060,7 @@ AsyncCallback  异步回调
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Posté le</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-27T22:28:41+08:00">
                 2017-10-27
@@ -1156,7 +1179,7 @@ AsyncCallback  异步回调
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Posté le</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-27T21:39:21+08:00">
                 2017-10-27
@@ -1289,7 +1312,7 @@ AsyncCallback  异步回调
                 <a href="/archives/">
               
                   <span class="site-state-item-count">7</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-name">articles</span>
                 </a>
               </div>
             
@@ -1349,7 +1372,7 @@ AsyncCallback  异步回调
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
+  <div class="theme-info">Thème &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
 
 
 
