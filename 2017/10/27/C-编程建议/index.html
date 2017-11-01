@@ -85,7 +85,7 @@
 <meta property="og:url" content="http://http://hexo.junyu.pro/2017/10/27/C-编程建议/index.html">
 <meta property="og:site_name" content="陈玉曌的博客">
 <meta property="og:description" content="设计模式六个原则1、单一职责原则；这个有一个需要注意的是：当职责扩散时，立刻对代码进行重构，将一个分解成单一职责的几个不同类。 2、里族替换原则；子类继承父类时，尽量不不重写父类的方法也不要重载父类的方法。 里氏替换原则通俗的来讲就是：子类可以扩展父类的功能，但不能改变父类原有的功能。它包含以下4层含义： 子类可以实现父类的抽象方法，但不能覆盖父类的非抽象方法。 子类中可以增加自己特有的方法。 当">
-<meta property="og:updated_time" content="2017-10-31T15:55:09.835Z">
+<meta property="og:updated_time" content="2017-11-01T15:14:26.854Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C#编程建议">
 <meta name="twitter:description" content="设计模式六个原则1、单一职责原则；这个有一个需要注意的是：当职责扩散时，立刻对代码进行重构，将一个分解成单一职责的几个不同类。 2、里族替换原则；子类继承父类时，尽量不不重写父类的方法也不要重载父类的方法。 里氏替换原则通俗的来讲就是：子类可以扩展父类的功能，但不能改变父类原有的功能。它包含以下4层含义： 子类可以实现父类的抽象方法，但不能覆盖父类的非抽象方法。 子类中可以增加自己特有的方法。 当">
@@ -184,7 +184,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Accueil
+            Startseite
           </a>
         </li>
       
@@ -194,7 +194,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -258,7 +258,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posté le</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-27T22:29:41+08:00">
                 2017-10-27
@@ -368,9 +368,17 @@ AsyncCallback  异步回调
 <p>7、应避免线程过多，即使必须线程，也可以考虑线程池技术，例如异步。</p>
 <p>8、使用ThreadPool或BackgroundWorker代替Thread<br><code>ThreadPool.QueueUserWorkItem((objState) =&gt; { // 工作代码},null);</code></p>
 <p>9、使用Task 代替 ThreadPool</p>
-<p>Task 提供属性，查看任务状态。</p>
-<p>10、 </p>
-
+<p>Task 提供属性，查看任务状态。<br>支持任务工厂</p>
+<p>因此如无特殊原因，涉及多线程内容，均使用Task完成</p>
+<p>10、使用Parallel 简化同步状态下的Task使用，主要提供3个方法：For，Foreach，Invoke，Invoke方法简化启动一组并行操作。<br>如果输出必须必须是同步的或者必须是顺序输出，则不应使用Parallel的方式。</p>
+<p>并行编程，意味运行时在后台将任务分配到尽量多的CPU上，在后台使用Task管理，但并不等同于异步。</p>
+<p>陷阱：Parallel启动多个任务，但不意味着启动多个线程，这是运行时根据系统自身的调度算法决定的。</p>
+<p>11、使用PLINQ，这个并发多线程的查询速度一般较快，但是输出是无序的。<br>对集合执行方法ElementAt等方法，顺序查询速度更快。</p>
+<p>12、Task异常处理<br>处理非主线程产生的异常，最终的办法都是将其包装到主线程上。<br>任务中捕获的异常一般都包装到AggregateException这个任务并行库编程中的最上层异常。<br>建议：使用事件通知的模型处理Task中的异常。</p>
+<p>13、Parallel中的异常处理</p>
+<p>14、并行并不总是速度更快<br>并行带来的后台任务与任务管理都会带来一定开销，如果一项工作本来就可以很快完成或者循环体很小，就不需要使用并行。</p>
+<p>15、并行方法中谨慎使用锁、<br>锁其实就是将多线程变成单线程，如果方法体的内容需要同步运行就不该使用并行。</p>
+<h1 id="架构部分"><a href="#架构部分" class="headerlink" title="架构部分"></a>架构部分</h1>
       
     </div>
     
@@ -460,10 +468,10 @@ AsyncCallback  异步回调
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table Des Matières
+            Inhaltsverzeichnis
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Ensemble
+            Übersicht
           </li>
         </ul>
       
@@ -484,7 +492,7 @@ AsyncCallback  异步回调
                 <a href="/archives/">
               
                   <span class="site-state-item-count">7</span>
-                  <span class="site-state-item-name">articles</span>
+                  <span class="site-state-item-name">Artikel</span>
                 </a>
               </div>
             
@@ -522,7 +530,7 @@ AsyncCallback  异步回调
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#设计模式六个原则"><span class="nav-number">1.</span> <span class="nav-text">设计模式六个原则</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#语言"><span class="nav-number">2.</span> <span class="nav-text">语言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#集合与Linq"><span class="nav-number">3.</span> <span class="nav-text">集合与Linq</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#泛型-委托-事件"><span class="nav-number">4.</span> <span class="nav-text">泛型/委托/事件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#资源管理与序列化"><span class="nav-number">5.</span> <span class="nav-text">资源管理与序列化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异常与自定义异常"><span class="nav-number">6.</span> <span class="nav-text">异常与自定义异常</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异步，多线程，任务和并行"><span class="nav-number">7.</span> <span class="nav-text">异步，多线程，任务和并行</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#设计模式六个原则"><span class="nav-number">1.</span> <span class="nav-text">设计模式六个原则</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#语言"><span class="nav-number">2.</span> <span class="nav-text">语言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#集合与Linq"><span class="nav-number">3.</span> <span class="nav-text">集合与Linq</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#泛型-委托-事件"><span class="nav-number">4.</span> <span class="nav-text">泛型/委托/事件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#资源管理与序列化"><span class="nav-number">5.</span> <span class="nav-text">资源管理与序列化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异常与自定义异常"><span class="nav-number">6.</span> <span class="nav-text">异常与自定义异常</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异步，多线程，任务和并行"><span class="nav-number">7.</span> <span class="nav-text">异步，多线程，任务和并行</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#架构部分"><span class="nav-number">8.</span> <span class="nav-text">架构部分</span></a></li></ol></div>
             
 
           </div>
@@ -552,7 +560,7 @@ AsyncCallback  异步回调
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
@@ -560,7 +568,7 @@ AsyncCallback  异步回调
 
 
 
-  <div class="theme-info">Thème &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
 
 
 
