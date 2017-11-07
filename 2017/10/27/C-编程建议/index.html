@@ -85,7 +85,7 @@
 <meta property="og:url" content="http://http://hexo.junyu.pro/2017/10/27/C-编程建议/index.html">
 <meta property="og:site_name" content="陈玉曌的博客">
 <meta property="og:description" content="设计模式六个原则1、单一职责原则；这个有一个需要注意的是：当职责扩散时，立刻对代码进行重构，将一个分解成单一职责的几个不同类。 2、里族替换原则；子类继承父类时，尽量不不重写父类的方法也不要重载父类的方法。 里氏替换原则通俗的来讲就是：子类可以扩展父类的功能，但不能改变父类原有的功能。它包含以下4层含义： 子类可以实现父类的抽象方法，但不能覆盖父类的非抽象方法。 子类中可以增加自己特有的方法。 当">
-<meta property="og:updated_time" content="2017-11-01T15:14:26.854Z">
+<meta property="og:updated_time" content="2017-11-07T13:05:26.870Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C#编程建议">
 <meta name="twitter:description" content="设计模式六个原则1、单一职责原则；这个有一个需要注意的是：当职责扩散时，立刻对代码进行重构，将一个分解成单一职责的几个不同类。 2、里族替换原则；子类继承父类时，尽量不不重写父类的方法也不要重载父类的方法。 里氏替换原则通俗的来讲就是：子类可以扩展父类的功能，但不能改变父类原有的功能。它包含以下4层含义： 子类可以实现父类的抽象方法，但不能覆盖父类的非抽象方法。 子类中可以增加自己特有的方法。 当">
@@ -378,7 +378,23 @@ AsyncCallback  异步回调
 <p>13、Parallel中的异常处理</p>
 <p>14、并行并不总是速度更快<br>并行带来的后台任务与任务管理都会带来一定开销，如果一项工作本来就可以很快完成或者循环体很小，就不需要使用并行。</p>
 <p>15、并行方法中谨慎使用锁、<br>锁其实就是将多线程变成单线程，如果方法体的内容需要同步运行就不该使用并行。</p>
-<h1 id="架构部分"><a href="#架构部分" class="headerlink" title="架构部分"></a>架构部分</h1>
+<h1 id="架构部分"><a href="#架构部分" class="headerlink" title="架构部分"></a>架构部分</h1><p>1、不为抽象类提供公共的构造方法。</p>
+<p>2、可见字段应该重构为方法。</p>
+<p>3、谨慎将数组或集合作为属性。</p>
+<p>4、构造方法应初始化主要属性和字段。</p>
+<p>5、区别对待override和new。<br>子类方法 ：new 该方法被定义为独立与基类的方法。<br>          override 子类对象将调用该方法，而不是调用基方法。</p>
+<p>6、避免在构造方法中调用虚成员</p>
+<p>7、成员应优先考虑公开基类型或接口<br>优先考虑将基类型或接口作为参数传递</p>
+<p>8、用params减少重复参数</p>
+<p>9、静态方法与实例方法没有区别</p>
+<p>10、使用扩展方法向现有类型添加方法。</p>
+<h1 id="类型设计"><a href="#类型设计" class="headerlink" title="类型设计"></a>类型设计</h1><p>1、接口和抽象类的应用场合<br>    1）如果对象存在多个功能相近且关系紧密的版本则使用抽象类。<br>    2）如果对象关系不紧密，但是若干功能拥有共同的声明，则使用接口。<br>    3）抽象类适合提供丰富功能的场合，接口适合提供单一的一组功能。</p>
+<ul>
+<li>抽象类解决的是“Is a”  </li>
+<li>接口解决的是“Can do”</li>
+</ul>
+<p>2、</p>
+
       
     </div>
     
@@ -530,7 +546,7 @@ AsyncCallback  异步回调
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#设计模式六个原则"><span class="nav-number">1.</span> <span class="nav-text">设计模式六个原则</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#语言"><span class="nav-number">2.</span> <span class="nav-text">语言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#集合与Linq"><span class="nav-number">3.</span> <span class="nav-text">集合与Linq</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#泛型-委托-事件"><span class="nav-number">4.</span> <span class="nav-text">泛型/委托/事件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#资源管理与序列化"><span class="nav-number">5.</span> <span class="nav-text">资源管理与序列化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异常与自定义异常"><span class="nav-number">6.</span> <span class="nav-text">异常与自定义异常</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异步，多线程，任务和并行"><span class="nav-number">7.</span> <span class="nav-text">异步，多线程，任务和并行</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#架构部分"><span class="nav-number">8.</span> <span class="nav-text">架构部分</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#设计模式六个原则"><span class="nav-number">1.</span> <span class="nav-text">设计模式六个原则</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#语言"><span class="nav-number">2.</span> <span class="nav-text">语言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#集合与Linq"><span class="nav-number">3.</span> <span class="nav-text">集合与Linq</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#泛型-委托-事件"><span class="nav-number">4.</span> <span class="nav-text">泛型/委托/事件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#资源管理与序列化"><span class="nav-number">5.</span> <span class="nav-text">资源管理与序列化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异常与自定义异常"><span class="nav-number">6.</span> <span class="nav-text">异常与自定义异常</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异步，多线程，任务和并行"><span class="nav-number">7.</span> <span class="nav-text">异步，多线程，任务和并行</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#架构部分"><span class="nav-number">8.</span> <span class="nav-text">架构部分</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#类型设计"><span class="nav-number">9.</span> <span class="nav-text">类型设计</span></a></li></ol></div>
             
 
           </div>
