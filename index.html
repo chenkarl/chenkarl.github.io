@@ -181,7 +181,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Accueil
           </a>
         </li>
       
@@ -191,7 +191,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -257,7 +257,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posté le</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-30T19:33:26+08:00">
                 2017-10-30
@@ -506,7 +506,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posté le</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-27T23:02:06+08:00">
                 2017-10-27
@@ -626,7 +626,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posté le</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-27T23:00:23+08:00">
                 2017-10-27
@@ -748,7 +748,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posté le</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-27T22:43:42+08:00">
                 2017-10-27
@@ -869,7 +869,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posté le</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-27T22:29:41+08:00">
                 2017-10-27
@@ -1006,7 +1006,10 @@ AsyncCallback  异步回调
 <li>抽象类解决的是“Is a”  </li>
 <li>接口解决的是“Can do”</li>
 </ul>
-<p>2、</p>
+<p>2、区分组合和继承的应用场合<br>继承会导致子类具有大量用不上的基类的公共接口，破坏封装性。<br>组合可以组合多个类型。</p>
+<p>3、使用多态代替条件语句<br>设计一个抽象类，其余可能继承这个基类，并复写基类函数，达到实现条件功能。优点：可扩展性增强并且关闭修改。</p>
+<p>4、使用私有构造函数强化单例<br>sealed 密封属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">public sealed class Singleton</div><div class="line">&#123;</div><div class="line">    static Singleton instance = null;</div><div class="line">    //</div><div class="line">    private Singleton()</div><div class="line">    &#123;</div><div class="line"></div><div class="line">    &#125;</div><div class="line">    public static Singleton Instance</div><div class="line">    &#123;</div><div class="line">        get</div><div class="line">        &#123;</div><div class="line">            return instance == null ? new Singleton() : instance;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    public void SampleMethod()</div><div class="line">    &#123;</div><div class="line">        </div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
           
         
@@ -1084,7 +1087,7 @@ AsyncCallback  异步回调
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posté le</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-27T22:28:41+08:00">
                 2017-10-27
@@ -1203,7 +1206,7 @@ AsyncCallback  异步回调
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posté le</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-27T21:39:21+08:00">
                 2017-10-27
@@ -1336,7 +1339,7 @@ AsyncCallback  异步回调
                 <a href="/archives/">
               
                   <span class="site-state-item-count">7</span>
-                  <span class="site-state-item-name">Artikel</span>
+                  <span class="site-state-item-name">articles</span>
                 </a>
               </div>
             
@@ -1388,7 +1391,7 @@ AsyncCallback  异步回调
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
@@ -1396,7 +1399,7 @@ AsyncCallback  异步回调
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
+  <div class="theme-info">Thème &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
 
 
 
