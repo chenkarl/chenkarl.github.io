@@ -181,7 +181,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -191,7 +191,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -247,7 +247,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/11/09/逆向工程/" itemprop="url">Unbenannt</a></h1>
+                <a class="post-title-link" href="/2017/11/09/逆向工程/" itemprop="url">Untitled</a></h1>
         
 
         <div class="post-meta">
@@ -257,7 +257,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-09T21:37:14+08:00">
                 2017-11-09
@@ -376,7 +376,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-30T19:33:26+08:00">
                 2017-10-30
@@ -625,7 +625,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-27T23:02:06+08:00">
                 2017-10-27
@@ -745,7 +745,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-27T23:00:23+08:00">
                 2017-10-27
@@ -867,7 +867,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-27T22:43:42+08:00">
                 2017-10-27
@@ -988,7 +988,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-27T22:29:41+08:00">
                 2017-10-27
@@ -1149,6 +1149,9 @@ AsyncCallback  异步回调
 <p>10、避免双向耦合</p>
 <p>常见解耦方式包括：提炼出一个接口，类都继承这个接口。</p>
 <p>11、将现实世界中的对象抽象为类，将可复用对象圈起来就是命名空间。</p>
+<h1 id="安全性设计"><a href="#安全性设计" class="headerlink" title="安全性设计"></a>安全性设计</h1><p>1、声明变量前考虑最大值<br>使用checked检测，如果变量溢出将会抛出一个异常。</p>
+<p>2、MD5没有逆过程<br>存储密码，将密码的MD5值存在数据库中，当验证登陆时将用户的密码进行MD5校验。<br>穷举法与字典法可以进行逆过程。<br>改进办法：多次MD5<br>设计一个足够复杂的密码hashKey,将其的MD5与用户输入的MD5相加，再求一次MD5</p>
+<p>3、通过HASH来验证文件是否被篡改<br>对文件求MD5值，可以用来验证文件是否被篡改。</p>
 
           
         
@@ -1226,7 +1229,7 @@ AsyncCallback  异步回调
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-27T22:28:41+08:00">
                 2017-10-27
@@ -1345,7 +1348,7 @@ AsyncCallback  异步回调
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-27T21:39:21+08:00">
                 2017-10-27
@@ -1478,7 +1481,7 @@ AsyncCallback  异步回调
                 <a href="/archives/">
               
                   <span class="site-state-item-count">8</span>
-                  <span class="site-state-item-name">Artikel</span>
+                  <span class="site-state-item-name">posts</span>
                 </a>
               </div>
             
@@ -1530,7 +1533,7 @@ AsyncCallback  异步回调
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 

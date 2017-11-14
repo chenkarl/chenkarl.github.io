@@ -85,7 +85,7 @@
 <meta property="og:url" content="http://http://hexo.junyu.pro/2017/10/27/C-编程建议/index.html">
 <meta property="og:site_name" content="陈玉曌的博客">
 <meta property="og:description" content="设计模式六个原则1、单一职责原则；这个有一个需要注意的是：当职责扩散时，立刻对代码进行重构，将一个分解成单一职责的几个不同类。 2、里族替换原则；子类继承父类时，尽量不不重写父类的方法也不要重载父类的方法。 里氏替换原则通俗的来讲就是：子类可以扩展父类的功能，但不能改变父类原有的功能。它包含以下4层含义： 子类可以实现父类的抽象方法，但不能覆盖父类的非抽象方法。 子类中可以增加自己特有的方法。 当">
-<meta property="og:updated_time" content="2017-11-09T15:03:50.948Z">
+<meta property="og:updated_time" content="2017-11-14T15:23:26.874Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C#编程建议">
 <meta name="twitter:description" content="设计模式六个原则1、单一职责原则；这个有一个需要注意的是：当职责扩散时，立刻对代码进行重构，将一个分解成单一职责的几个不同类。 2、里族替换原则；子类继承父类时，尽量不不重写父类的方法也不要重载父类的方法。 里氏替换原则通俗的来讲就是：子类可以扩展父类的功能，但不能改变父类原有的功能。它包含以下4层含义： 子类可以实现父类的抽象方法，但不能覆盖父类的非抽象方法。 子类中可以增加自己特有的方法。 当">
@@ -184,7 +184,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -194,7 +194,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -258,7 +258,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-27T22:29:41+08:00">
                 2017-10-27
@@ -417,6 +417,9 @@ AsyncCallback  异步回调
 <p>10、避免双向耦合</p>
 <p>常见解耦方式包括：提炼出一个接口，类都继承这个接口。</p>
 <p>11、将现实世界中的对象抽象为类，将可复用对象圈起来就是命名空间。</p>
+<h1 id="安全性设计"><a href="#安全性设计" class="headerlink" title="安全性设计"></a>安全性设计</h1><p>1、声明变量前考虑最大值<br>使用checked检测，如果变量溢出将会抛出一个异常。</p>
+<p>2、MD5没有逆过程<br>存储密码，将密码的MD5值存在数据库中，当验证登陆时将用户的密码进行MD5校验。<br>穷举法与字典法可以进行逆过程。<br>改进办法：多次MD5<br>设计一个足够复杂的密码hashKey,将其的MD5与用户输入的MD5相加，再求一次MD5</p>
+<p>3、通过HASH来验证文件是否被篡改<br>对文件求MD5值，可以用来验证文件是否被篡改。</p>
 
       
     </div>
@@ -507,10 +510,10 @@ AsyncCallback  异步回调
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Inhaltsverzeichnis
+            Table of Contents
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Übersicht
+            Overview
           </li>
         </ul>
       
@@ -531,7 +534,7 @@ AsyncCallback  异步回调
                 <a href="/archives/">
               
                   <span class="site-state-item-count">8</span>
-                  <span class="site-state-item-name">Artikel</span>
+                  <span class="site-state-item-name">posts</span>
                 </a>
               </div>
             
@@ -569,7 +572,7 @@ AsyncCallback  异步回调
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#设计模式六个原则"><span class="nav-number">1.</span> <span class="nav-text">设计模式六个原则</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#语言"><span class="nav-number">2.</span> <span class="nav-text">语言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#集合与Linq"><span class="nav-number">3.</span> <span class="nav-text">集合与Linq</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#泛型-委托-事件"><span class="nav-number">4.</span> <span class="nav-text">泛型/委托/事件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#资源管理与序列化"><span class="nav-number">5.</span> <span class="nav-text">资源管理与序列化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异常与自定义异常"><span class="nav-number">6.</span> <span class="nav-text">异常与自定义异常</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异步，多线程，任务和并行"><span class="nav-number">7.</span> <span class="nav-text">异步，多线程，任务和并行</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#架构部分"><span class="nav-number">8.</span> <span class="nav-text">架构部分</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#类型设计"><span class="nav-number">9.</span> <span class="nav-text">类型设计</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#设计模式六个原则"><span class="nav-number">1.</span> <span class="nav-text">设计模式六个原则</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#语言"><span class="nav-number">2.</span> <span class="nav-text">语言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#集合与Linq"><span class="nav-number">3.</span> <span class="nav-text">集合与Linq</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#泛型-委托-事件"><span class="nav-number">4.</span> <span class="nav-text">泛型/委托/事件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#资源管理与序列化"><span class="nav-number">5.</span> <span class="nav-text">资源管理与序列化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异常与自定义异常"><span class="nav-number">6.</span> <span class="nav-text">异常与自定义异常</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异步，多线程，任务和并行"><span class="nav-number">7.</span> <span class="nav-text">异步，多线程，任务和并行</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#架构部分"><span class="nav-number">8.</span> <span class="nav-text">架构部分</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#类型设计"><span class="nav-number">9.</span> <span class="nav-text">类型设计</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安全性设计"><span class="nav-number">10.</span> <span class="nav-text">安全性设计</span></a></li></ol></div>
             
 
           </div>
@@ -599,7 +602,7 @@ AsyncCallback  异步回调
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
