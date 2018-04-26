@@ -85,7 +85,7 @@
 <meta property="og:url" content="http://http://hexo.junyu.pro/2018/04/19/编程珠玑读书笔记/index.html">
 <meta property="og:site_name" content="陈玉曌的博客">
 <meta property="og:description" content="1、问题：给定一个最多包含40亿个随机排列的 32位整数 的顺序文件，找出一个不在文件中的32位整数。情景1：具有足够内存 情景2：有几个外部的临时文件，但仅有几百字节的内存 2、问题：将一个n元一维向量向左 循环移位 i个位置。例:n=8,i=3时，向量abcdefgh=&amp;gt;defghabc简单方法：一个n元中间变量在n步完成；情景：使用数十个额外字节的存储空间，在正比于n的时间内完成向量的">
-<meta property="og:updated_time" content="2018-04-19T14:42:10.500Z">
+<meta property="og:updated_time" content="2018-04-26T13:52:27.220Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="编程珠玑读书笔记">
 <meta name="twitter:description" content="1、问题：给定一个最多包含40亿个随机排列的 32位整数 的顺序文件，找出一个不在文件中的32位整数。情景1：具有足够内存 情景2：有几个外部的临时文件，但仅有几百字节的内存 2、问题：将一个n元一维向量向左 循环移位 i个位置。例:n=8,i=3时，向量abcdefgh=&amp;gt;defghabc简单方法：一个n元中间变量在n步完成；情景：使用数十个额外字节的存储空间，在正比于n的时间内完成向量的">
@@ -311,6 +311,19 @@
 <p>结构话数据</p>
 <p>发明家悖论：更一般性的问题也许更容易解决<br>意味着直接编写解决23种情况的问题很难；而编写一个处理n种情况的通用程序，再令n=23得到最终结果却相对比较容易</p>
 <p>在节省空间无计可施时，将自己从代码中解脱出来，退回起点研究数据，往往会有效。数据的表现形式时程序设计的根本。<br>原则：<br>(1)使用数组重新编写重复代码。<br>(2)封装复杂结构。当需要非常复杂的数据结构时，使用抽象术语进行定义并将操作封装为类。<br>(3)尽可能使用高级工具<br>(4)从数据得出程序的结构。</p>
+<pre><code>编写正确的程序
+1、二分搜索
+l=0;u=n-1
+loop
+{ mustbe(1,u)}
+if l&gt;u
+    p=-1 ;break;
+m=(1+u)/2
+case 
+    x[m]&lt; t : l=m+l
+    x[m]= t : p=m ; break
+    x[m]&gt; t : u=m-1
+</code></pre><p>原理<br>1、断言<br>输入、程序变量和输出之间的关系勾勒出了程序的状态<br>2、顺序控制结构<br>3、选择控制结构<br>4、迭代控制结构<br>初始化，保持，终止<br>5、函数</p>
 
       
     </div>
@@ -335,8 +348,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/18/疑惑的随笔记录/" rel="next" title="疑惑的随笔记录">
-                <i class="fa fa-chevron-left"></i> 疑惑的随笔记录
+              <a href="/2018/04/19/2018年目标/" rel="next" title="2018年目标及计划">
+                <i class="fa fa-chevron-left"></i> 2018年目标及计划
               </a>
             
           </div>
@@ -345,8 +358,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/04/19/2018年目标/" rel="prev" title="2018年目标及计划">
-                2018年目标及计划 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/04/19/微信小程序学习笔记/" rel="prev" title="微信小程序学习笔记">
+                微信小程序学习笔记 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -415,7 +428,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">Artikel</span>
                 </a>
               </div>
