@@ -85,7 +85,7 @@
 <meta property="og:url" content="http://http://hexo.junyu.pro/2018/04/19/Go语言实战读书笔记/index.html">
 <meta property="og:site_name" content="陈玉曌的博客">
 <meta property="og:description" content="书籍源码 第一章1、解决的问题1.1 开发速度1.2 并发goroutine 类似线程通道（channel）内置的数据结构，可以让用户在不同goroutine同步发送具有类型的消息。编程模型倾向在goroutine间发送消息，而不是让多个goroutine争夺同一个数据的控制权。 1.3 类型系统类型简单接口对行为建模-鸭子类型接口作为代码复用的基本模块 1.4内存管理 2、核心概念 第二章1、特">
-<meta property="og:updated_time" content="2018-05-04T14:33:47.337Z">
+<meta property="og:updated_time" content="2018-05-08T04:05:49.136Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Go语言实战读书笔记">
 <meta name="twitter:description" content="书籍源码 第一章1、解决的问题1.1 开发速度1.2 并发goroutine 类似线程通道（channel）内置的数据结构，可以让用户在不同goroutine同步发送具有类型的消息。编程模型倾向在goroutine间发送消息，而不是让多个goroutine争夺同一个数据的控制权。 1.3 类型系统类型简单接口对行为建模-鸭子类型接口作为代码复用的基本模块 1.4内存管理 2、核心概念 第二章1、特">
@@ -184,7 +184,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -194,7 +194,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -258,7 +258,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-19T22:17:00+08:00">
                 2018-04-19
@@ -309,11 +309,14 @@
 <p>都是又数组构成</p>
 <p>小结</p>
 <h1 id="第五章-类型系统"><a href="#第五章-类型系统" class="headerlink" title="第五章 类型系统"></a>第五章 类型系统</h1><p>1、结构体<br>2、具名类型</p>
-<p>内置类型<br>数值，字符串，布尔<br>引用类型<br>切片，映射，通道，接口，函数<br>3、接口</p>
+<p>内置类型<br>数值，字符串，布尔<br>引用类型<br>切片，映射，通道，接口，函数</p>
+<p>原始类型，类型是原始的，类型增加值是创建新值<br>非原始，类型增加值是修改当前值<br>3、接口</p>
 <p>方法集：定义了一组关联到给定类型的值或指针的方法</p>
 <p>因为不能总是获取到一个值的地址，所以值的方法集只包括了使用值接收者实现的方法</p>
 <p>4、类型嵌套</p>
-<h1 id="第六章-调度器、并发、通道"><a href="#第六章-调度器、并发、通道" class="headerlink" title="第六章 调度器、并发、通道"></a>第六章 调度器、并发、通道</h1><h1 id="第八章-标准库"><a href="#第八章-标准库" class="headerlink" title="第八章 标准库"></a>第八章 标准库</h1><p>1、log<br>2、json<br>3、io</p>
+<h1 id="第六章-调度器、并发、通道"><a href="#第六章-调度器、并发、通道" class="headerlink" title="第六章 调度器、并发、通道"></a>第六章 调度器、并发、通道</h1><p>1、并发指goroutine运行的时候是相互独立的.<br>2、关键字 go 创建goroutine 来运行函数<br>3、goroutine 在逻辑处理器上运行，逻辑处理器具有独立的系统线程和运行队列<br>4、竞争状态是指两个或多个goroutine试图访问同一个资源<br>5、防止出现竞争状态：原子函数、互斥锁<br>6、通道：两个goroutine直接共享数据<br>7、无缓冲通道保证同时交换数据，有缓冲无此保证</p>
+<h1 id="第七章-并发模式"><a href="#第七章-并发模式" class="headerlink" title="第七章 并发模式"></a>第七章 并发模式</h1><p>1、</p>
+<h1 id="第八章-标准库"><a href="#第八章-标准库" class="headerlink" title="第八章 标准库"></a>第八章 标准库</h1><p>1、log<br>2、json<br>3、io</p>
 <h1 id="第九章-单元测试"><a href="#第九章-单元测试" class="headerlink" title="第九章 单元测试"></a>第九章 单元测试</h1>
       
     </div>
@@ -338,8 +341,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/19/2018年目标/" rel="next" title="2018年目标及计划">
-                <i class="fa fa-chevron-left"></i> 2018年目标及计划
+              <a href="/2018/04/19/inter经验与教训/" rel="next" title="inter经验与教训">
+                <i class="fa fa-chevron-left"></i> inter经验与教训
               </a>
             
           </div>
@@ -348,8 +351,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/04/19/编程珠玑读书笔记/" rel="prev" title="编程珠玑读书笔记">
-                编程珠玑读书笔记 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/04/19/2018年目标/" rel="prev" title="2018年目标及计划">
+                2018年目标及计划 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -404,10 +407,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
+            Inhaltsverzeichnis
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
+            Übersicht
           </li>
         </ul>
       
@@ -428,7 +431,7 @@
                 <a href="/archives/">
               
                   <span class="site-state-item-count">22</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-name">Artikel</span>
                 </a>
               </div>
             
@@ -466,7 +469,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第一章"><span class="nav-number">1.</span> <span class="nav-text">第一章</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第二章"><span class="nav-number">2.</span> <span class="nav-text">第二章</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第三章"><span class="nav-number">3.</span> <span class="nav-text">第三章</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第四章"><span class="nav-number">4.</span> <span class="nav-text">第四章</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第五章-类型系统"><span class="nav-number">5.</span> <span class="nav-text">第五章 类型系统</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第六章-调度器、并发、通道"><span class="nav-number">6.</span> <span class="nav-text">第六章 调度器、并发、通道</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第八章-标准库"><span class="nav-number">7.</span> <span class="nav-text">第八章 标准库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第九章-单元测试"><span class="nav-number">8.</span> <span class="nav-text">第九章 单元测试</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第一章"><span class="nav-number">1.</span> <span class="nav-text">第一章</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第二章"><span class="nav-number">2.</span> <span class="nav-text">第二章</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第三章"><span class="nav-number">3.</span> <span class="nav-text">第三章</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第四章"><span class="nav-number">4.</span> <span class="nav-text">第四章</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第五章-类型系统"><span class="nav-number">5.</span> <span class="nav-text">第五章 类型系统</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第六章-调度器、并发、通道"><span class="nav-number">6.</span> <span class="nav-text">第六章 调度器、并发、通道</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第七章-并发模式"><span class="nav-number">7.</span> <span class="nav-text">第七章 并发模式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第八章-标准库"><span class="nav-number">8.</span> <span class="nav-text">第八章 标准库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第九章-单元测试"><span class="nav-number">9.</span> <span class="nav-text">第九章 单元测试</span></a></li></ol></div>
             
 
           </div>
@@ -496,7 +499,7 @@
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
