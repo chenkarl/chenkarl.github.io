@@ -86,7 +86,7 @@
 <meta property="og:url" content="http://http://hexo.junyu.pro/2018/05/14/学习笔记/Nodejs学习笔记/index.html">
 <meta property="og:site_name" content="陈玉曌的博客">
 <meta property="og:description" content="一、概念理解原型链：    原型对象：可以作为一个模板，新对象可以从中获取原始的属性。    任何对象都可以指定自身的属性，既可以编译时创建也可以在运行时创建。    任何对象都可以作为另一个对象的原型k，从而允许后者共享前者的属性。    proto属性会指向函数对象的原型对象，由proto属性串起来直到null的链叫做原型链。 作用域链：    根据在内部函数可以访问外部函数变量的这种机制，用">
-<meta property="og:updated_time" content="2018-05-19T03:45:50.368Z">
+<meta property="og:updated_time" content="2018-05-22T15:23:28.634Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node.js学习笔记">
 <meta name="twitter:description" content="一、概念理解原型链：    原型对象：可以作为一个模板，新对象可以从中获取原始的属性。    任何对象都可以指定自身的属性，既可以编译时创建也可以在运行时创建。    任何对象都可以作为另一个对象的原型k，从而允许后者共享前者的属性。    proto属性会指向函数对象的原型对象，由proto属性串起来直到null的链叫做原型链。 作用域链：    根据在内部函数可以访问外部函数变量的这种机制，用">
@@ -185,7 +185,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -195,7 +195,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -259,7 +259,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-14T09:44:00+08:00">
                 2018-05-14
@@ -308,6 +308,7 @@
 <h2 id="连接MongoDb"><a href="#连接MongoDb" class="headerlink" title="连接MongoDb"></a>连接MongoDb</h2><blockquote>
 <p>使用Mongoose<br>可以监听的事件：open,error,disconnected,connected(这个能不能监听。。。。)</p>
 </blockquote>
+<h2 id="原则"><a href="#原则" class="headerlink" title="原则"></a>原则</h2><p>1、不阻塞。因为node是单线程的。<br>2、快速返回。如果不能快速返回，就应当将其移进另一个线程中。</p>
 <h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><p>Vows</p>
 <p>Mocha</p>
 <p>总结：</p>
@@ -407,10 +408,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Inhaltsverzeichnis
+            Table of Contents
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Übersicht
+            Overview
           </li>
         </ul>
       
@@ -431,7 +432,7 @@
                 <a href="/archives/">
               
                   <span class="site-state-item-count">27</span>
-                  <span class="site-state-item-name">Artikel</span>
+                  <span class="site-state-item-name">posts</span>
                 </a>
               </div>
             
@@ -444,7 +445,7 @@
               <div class="site-state-item site-state-tags">
                 
                   <span class="site-state-item-count">4</span>
-                  <span class="site-state-item-name">Tags</span>
+                  <span class="site-state-item-name">tags</span>
                 
               </div>
             
@@ -478,7 +479,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、概念理解"><span class="nav-number">1.</span> <span class="nav-text">一、概念理解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、操作"><span class="nav-number">2.</span> <span class="nav-text">二、操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他"><span class="nav-number">3.</span> <span class="nav-text">其他</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#连接MongoDb"><span class="nav-number">3.1.</span> <span class="nav-text">连接MongoDb</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#测试"><span class="nav-number">4.</span> <span class="nav-text">测试</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、概念理解"><span class="nav-number">1.</span> <span class="nav-text">一、概念理解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、操作"><span class="nav-number">2.</span> <span class="nav-text">二、操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他"><span class="nav-number">3.</span> <span class="nav-text">其他</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#连接MongoDb"><span class="nav-number">3.1.</span> <span class="nav-text">连接MongoDb</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原则"><span class="nav-number">3.2.</span> <span class="nav-text">原则</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#测试"><span class="nav-number">4.</span> <span class="nav-text">测试</span></a></li></ol></div>
             
 
           </div>
@@ -508,7 +509,7 @@
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
