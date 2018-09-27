@@ -74,3 +74,13 @@ redis-server --service-install redis.windows.conf
 
 # Egg
 ejs引擎没有增加csrf验证
+
+# Mongoose类型
+ObjectId
+String
+Number
+Date
+Buffer
+Boolean
+
+设默认值 default
