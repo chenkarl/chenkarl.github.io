@@ -301,7 +301,7 @@
         <p>docker images 列出所有镜像<br>docker run 镜像名：版本 通过某个镜像启动容器<br>-t 让Docker分配一个伪终端并绑定到容器的标准输入上<br>-i 让容器的标准输入保持打开<br>-d 让容器在后台已守护态运行</p>
 <p>docker ps 查看容器信息、<br>-a 查看终止状态的容器<br>docker logs 获取容器输出信息<br>docker stop 停止一个容器<br>docker start 启动一个终止状态的容器<br>docker restart 重启一个运行态的容器<br>docker export 导出某个容器 导出容器快照到本地文件<br>docker import 导入某个容器 从容器快照文件导入为镜像<br>docker rm 删除一个终止状态的容器<br>-f 删除一个运行状态的容器，docker会发送SIGKILL信号给容器</p>
 <p>dockerfile</p>
-<h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><p>FROM ubuntu:14.04<br>MAINTAINER Docker Chen <a href="&#109;&#x61;&#x69;&#108;&#x74;&#111;&#58;&#99;&#x68;&#101;&#x6e;&#x79;&#x75;&#122;&#104;&#x61;&#x6f;&#x2e;&#x6b;&#x61;&#114;&#108;&#x40;&#103;&#97;&#109;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;">&#99;&#x68;&#101;&#x6e;&#x79;&#x75;&#122;&#104;&#x61;&#x6f;&#x2e;&#x6b;&#x61;&#114;&#108;&#x40;&#103;&#97;&#109;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;</a><br>Run apt-get install ruby</p>
+<h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><p>FROM ubuntu:14.04<br>MAINTAINER Docker Chen <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#x6f;&#58;&#99;&#104;&#101;&#x6e;&#x79;&#x75;&#x7a;&#104;&#x61;&#x6f;&#46;&#x6b;&#97;&#114;&#x6c;&#64;&#103;&#97;&#x6d;&#x69;&#x6c;&#x2e;&#99;&#111;&#x6d;">&#99;&#104;&#101;&#x6e;&#x79;&#x75;&#x7a;&#104;&#x61;&#x6f;&#46;&#x6b;&#97;&#114;&#x6c;&#64;&#103;&#97;&#x6d;&#x69;&#x6c;&#x2e;&#99;&#111;&#x6d;</a><br>Run apt-get install ruby</p>
 <p>docker build -t=”my/ubuntu:1.0” 生成镜像 -t 添加标记</p>
 <p>ADD 复制本地文件到镜像<br>EXPOSE 开放端口<br>CMD 描述容器启动后运行的程序</p>
 <p>docker push 上传自己创建的镜像到仓库中</p>
