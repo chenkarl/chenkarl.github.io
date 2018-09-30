@@ -228,145 +228,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://http://hexo.junyu.pro/2018/05/14/学习笔记/Nodejs学习笔记/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="陈玉曌">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="陈玉曌的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/14/学习笔记/Nodejs学习笔记/" itemprop="url">Node.js学习笔记</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-14T09:44:00+08:00">
-                2018-05-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="一、概念理解"><a href="#一、概念理解" class="headerlink" title="一、概念理解"></a>一、概念理解</h1><p>原型链：<br>    原型对象：可以作为一个模板，新对象可以从中获取原始的属性。<br>    任何对象都可以指定自身的属性，既可以编译时创建也可以在运行时创建。<br>    任何对象都可以作为另一个对象的原型k，从而允许后者共享前者的属性。<br>    <em>proto</em>属性会指向函数对象的原型对象，由<em>proto</em>属性串起来直到null的链叫做原型链。</p>
-<p>作用域链：<br>    根据在内部函数可以访问外部函数变量的这种机制，用链实查找决定哪些数据能被内部函数访问。<br>词法作用域：<br>语法树：<br>上下文：<br>    挂载变量与函数的对象。<br>this:<br>    函数中调用为全局对象，浏览器中为window对象。<br>变量对象：执行环境中的变量和函数的总称叫做变量对象。<br>活动对象：活动对象就是作用域链上正在被执行和引用的变量对象。<br>垃圾回收：<br>闭包：内部函数的作用域链仍保持着对父函数活动对象的引用。<br>    作用:1、可以读取自身外部的变量。2、让这些外部变量始终保存在内存中。<br>回调：将一个函数作为参数传递给另一个函数，并且在第一个函数完成后被调用。</p>
-<h1 id="二、操作"><a href="#二、操作" class="headerlink" title="二、操作"></a>二、操作</h1><p>1、npm install [moudle name]<br>本地安装模块<br>npm install -g [moudle name]<br>全局安装模块</p>
-<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>node 解决并发依靠的是事件化的I/O模型</p>
-<p>js   只要在函数内部定义一个局部变量，函数在解析的时候都会将这个变量提前声明。<br>    函数内部声明变量一定要用var，如果不用实际上就是声明一个全局变量。</p>
-<p>express</p>
-<h2 id="连接MongoDb"><a href="#连接MongoDb" class="headerlink" title="连接MongoDb"></a>连接MongoDb</h2><blockquote>
-<p>使用Mongoose<br>可以监听的事件：open,error,disconnected,connected(这个能不能监听。。。。)</p>
-</blockquote>
-<h2 id="原则"><a href="#原则" class="headerlink" title="原则"></a>原则</h2><p>1、不阻塞。因为node是单线程的。<br>2、快速返回。如果不能快速返回，就应当将其移进另一个线程中。</p>
-<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><p>Vows</p>
-<p>Mocha</p>
-<p>总结：</p>
-<h1 id="nvm-管理node版本"><a href="#nvm-管理node版本" class="headerlink" title="nvm 管理node版本"></a>nvm 管理node版本</h1><p>内网</p>
-<p><a href="https://my.oschina.net/u/3305487/blog/1538289" target="_blank" rel="external">解决方案</a><br>nvm ls<br>列出所有node版本<br>nvm use v7.8.0<br>切换版本</p>
-<h1 id="中间件"><a href="#中间件" class="headerlink" title="中间件"></a>中间件</h1><p>用途：验证，日志记录，缓存异常通知，重定向<br>next()将请求和响应对象传递到下一个中间件（如果是最后一个中间件，就是应用程序逻辑），使用res.end()返回响应。</p>
-<h1 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h1><h2 id="Redis设为系统服务"><a href="#Redis设为系统服务" class="headerlink" title="Redis设为系统服务"></a>Redis设为系统服务</h2><p>redis-server –service-install redis.windows.conf</p>
-<h1 id="Egg"><a href="#Egg" class="headerlink" title="Egg"></a>Egg</h1><p>ejs引擎没有增加csrf验证</p>
-<h1 id="Mongoose类型"><a href="#Mongoose类型" class="headerlink" title="Mongoose类型"></a>Mongoose类型</h1><p>ObjectId<br>String<br>Number<br>Date<br>Buffer<br>Boolean</p>
-<p>设默认值 default</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://http://hexo.junyu.pro/2018/05/11/读书笔记/GoWeb编程读书笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1002,6 +863,126 @@ case
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://http://hexo.junyu.pro/2018/04/19/爬坑历程/inter经验与教训/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="陈玉曌">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="陈玉曌的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/19/爬坑历程/inter经验与教训/" itemprop="url">inter经验与教训</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-19T22:17:00+08:00">
+                2018-04-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>1、websocket<br>2、协程<br>3、unix网络编程<br>4、指针与引用区别<br>5、哈希表<br>直接定址发，平方取中法，除数取余法<br>开放寻址法，再散列法，链地址法，建立一个公共溢出区<br>6、动态数组<br>7、jekins使用流程<br>8、设计模式<br>9、保证软件质量<br>10、断言<br>assert 捕获的程序员自己错误<br>excepti 捕获的是环境或用户的错误</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://http://hexo.junyu.pro/2018/04/19/随笔/2018年目标/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1262,126 +1243,6 @@ case
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://http://hexo.junyu.pro/2018/04/19/爬坑历程/inter经验与教训/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="陈玉曌">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="陈玉曌的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/19/爬坑历程/inter经验与教训/" itemprop="url">inter经验与教训</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-19T22:17:00+08:00">
-                2018-04-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>1、websocket<br>2、协程<br>3、unix网络编程<br>4、指针与引用区别<br>5、哈希表<br>直接定址发，平方取中法，除数取余法<br>开放寻址法，再散列法，链地址法，建立一个公共溢出区<br>6、动态数组<br>7、jekins使用流程<br>8、设计模式<br>9、保证软件质量<br>10、断言<br>assert 捕获的程序员自己错误<br>excepti 捕获的是环境或用户的错误</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://http://hexo.junyu.pro/2018/04/18/随笔/疑惑的随笔记录/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1496,6 +1357,132 @@ case
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://http://hexo.junyu.pro/2018/04/12/学习笔记/mongo副本集/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="陈玉曌">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="陈玉曌的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/12/学习笔记/mongo副本集/" itemprop="url">mongo副本集笔记</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-12T14:17:00+08:00">
+                2018-04-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="副本集特征"><a href="#副本集特征" class="headerlink" title="副本集特征"></a>副本集特征</h1><ul>
+<li>N个节点的集群</li>
+<li>任何节点可作为主节点</li>
+<li>所有写入操作都在主节点上</li>
+<li>自动故障转移</li>
+<li>自动恢复<br># </li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
   
@@ -1546,7 +1533,7 @@ case
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">35</span>
+                  <span class="site-state-item-count">34</span>
                   <span class="site-state-item-name">Artikel</span>
                 </a>
               </div>
