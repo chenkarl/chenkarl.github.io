@@ -5,6 +5,8 @@ tags:
 ---
 *循序渐进Linux*
 
+[Linux 命令大全](http://man.linuxde.net/)
+
 # 一、系统服务管理工具systemd
 
 启动服务 system
@@ -36,7 +38,8 @@ mkdir| 创建一个命令 |
 more | 显示超过一个屏幕的文本文件 |
 cat | 将文件的内容输出到标准输出 |
 diff | 逐行比较文本文件的异同 |
-
+touch | 创建一个空文件 | 
+netstat -
 
 
 # 杂
