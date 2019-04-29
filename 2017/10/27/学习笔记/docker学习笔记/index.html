@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="">
+<html class="theme-next muse use-motion" lang="zh-tw">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -85,6 +85,7 @@
 <meta property="og:url" content="http://http://hexo.junyu.pro/2017/10/27/学习笔记/docker学习笔记/index.html">
 <meta property="og:site_name" content="陈玉曌的博客">
 <meta property="og:description" content="docker images 列出所有镜像docker run 镜像名：版本 通过某个镜像启动容器-t 让Docker分配一个伪终端并绑定到容器的标准输入上-i 让容器的标准输入保持打开-d 让容器在后台已守护态运行 docker ps 查看容器信息、-a 查看终止状态的容器docker logs 获取容器输出信息docker stop 停止一个容器docker start 启动一个终止状态的容器d">
+<meta property="og:locale" content="zh-tw">
 <meta property="og:updated_time" content="2018-08-27T13:06:12.930Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker学习笔记">
@@ -104,7 +105,7 @@
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -136,7 +137,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-tw">
 
   
   
@@ -184,7 +185,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            首頁
           </a>
         </li>
       
@@ -194,7 +195,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            歸檔
           </a>
         </li>
       
@@ -258,9 +259,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">發表於</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-27T22:28:41+08:00">
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2017-10-27T22:28:41+08:00">
                 2017-10-27
               </time>
             
@@ -301,7 +302,7 @@
         <p>docker images 列出所有镜像<br>docker run 镜像名：版本 通过某个镜像启动容器<br>-t 让Docker分配一个伪终端并绑定到容器的标准输入上<br>-i 让容器的标准输入保持打开<br>-d 让容器在后台已守护态运行</p>
 <p>docker ps 查看容器信息、<br>-a 查看终止状态的容器<br>docker logs 获取容器输出信息<br>docker stop 停止一个容器<br>docker start 启动一个终止状态的容器<br>docker restart 重启一个运行态的容器<br>docker export 导出某个容器 导出容器快照到本地文件<br>docker import 导入某个容器 从容器快照文件导入为镜像<br>docker rm 删除一个终止状态的容器<br>-f 删除一个运行状态的容器，docker会发送SIGKILL信号给容器</p>
 <p>dockerfile</p>
-<h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><p>FROM ubuntu:14.04<br>MAINTAINER Docker Chen <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#111;&#58;&#x63;&#x68;&#x65;&#x6e;&#121;&#x75;&#122;&#x68;&#x61;&#111;&#46;&#x6b;&#x61;&#114;&#x6c;&#64;&#103;&#97;&#x6d;&#x69;&#x6c;&#46;&#x63;&#111;&#109;">&#x63;&#x68;&#x65;&#x6e;&#121;&#x75;&#122;&#x68;&#x61;&#111;&#46;&#x6b;&#x61;&#114;&#x6c;&#64;&#103;&#97;&#x6d;&#x69;&#x6c;&#46;&#x63;&#111;&#109;</a><br>Run apt-get install ruby</p>
+<h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><p>FROM ubuntu:14.04<br>MAINTAINER Docker Chen <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#x63;&#104;&#x65;&#110;&#121;&#117;&#122;&#x68;&#97;&#x6f;&#x2e;&#107;&#97;&#x72;&#108;&#64;&#x67;&#97;&#x6d;&#x69;&#108;&#46;&#99;&#111;&#109;">&#x63;&#104;&#x65;&#110;&#121;&#117;&#122;&#x68;&#97;&#x6f;&#x2e;&#107;&#97;&#x72;&#108;&#64;&#x67;&#97;&#x6d;&#x69;&#108;&#46;&#99;&#111;&#109;</a><br>Run apt-get install ruby</p>
 <p>docker build -t=”my/ubuntu:1.0” 生成镜像 -t 添加标记</p>
 <p>ADD 复制本地文件到镜像<br>EXPOSE 开放端口<br>CMD 描述容器启动后运行的程序</p>
 <p>docker push 上传自己创建的镜像到仓库中</p>
@@ -329,8 +330,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/10/27/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2017/09/30/随笔/给多抓鱼的一点建议/" rel="next" title="给多抓鱼的一点建议">
+                <i class="fa fa-chevron-left"></i> 给多抓鱼的一点建议
               </a>
             
           </div>
@@ -395,10 +396,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Inhaltsverzeichnis
+            文章目錄
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Übersicht
+            本站概覽
           </li>
         </ul>
       
@@ -418,8 +419,8 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">38</span>
-                  <span class="site-state-item-name">Artikel</span>
+                  <span class="site-state-item-count">44</span>
+                  <span class="site-state-item-name">文章</span>
                 </a>
               </div>
             
@@ -431,8 +432,8 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">9</span>
-                  <span class="site-state-item-name">Tags</span>
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">標籤</span>
                 
               </div>
             
@@ -486,7 +487,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -496,7 +497,7 @@
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 強力驅動</div>
 
 
 
@@ -504,7 +505,7 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
+  <div class="theme-info">主題 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
 
 
 

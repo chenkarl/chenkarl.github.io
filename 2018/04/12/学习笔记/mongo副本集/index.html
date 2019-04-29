@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="">
+<html class="theme-next muse use-motion" lang="zh-tw">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -79,16 +79,17 @@
 
 
 
-<meta name="description" content="副本集特征 N个节点的集群 任何节点可作为主节点 所有写入操作都在主节点上 自动故障转移 自动恢复#   命令–version 列出Mongo版本">
+<meta name="description" content="副本集特征 N个节点的集群 任何节点可作为主节点 所有写入操作都在主节点上 自动故障转移 自动恢复#   命令–version 列出Mongo版本 副本集搭建流程新建Mongo配置-mongo.conf">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mongo副本集笔记">
 <meta property="og:url" content="http://http://hexo.junyu.pro/2018/04/12/学习笔记/mongo副本集/index.html">
 <meta property="og:site_name" content="陈玉曌的博客">
-<meta property="og:description" content="副本集特征 N个节点的集群 任何节点可作为主节点 所有写入操作都在主节点上 自动故障转移 自动恢复#   命令–version 列出Mongo版本">
-<meta property="og:updated_time" content="2018-11-02T07:39:39.715Z">
+<meta property="og:description" content="副本集特征 N个节点的集群 任何节点可作为主节点 所有写入操作都在主节点上 自动故障转移 自动恢复#   命令–version 列出Mongo版本 副本集搭建流程新建Mongo配置-mongo.conf">
+<meta property="og:locale" content="zh-tw">
+<meta property="og:updated_time" content="2019-02-28T13:09:58.410Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mongo副本集笔记">
-<meta name="twitter:description" content="副本集特征 N个节点的集群 任何节点可作为主节点 所有写入操作都在主节点上 自动故障转移 自动恢复#   命令–version 列出Mongo版本">
+<meta name="twitter:description" content="副本集特征 N个节点的集群 任何节点可作为主节点 所有写入操作都在主节点上 自动故障转移 自动恢复#   命令–version 列出Mongo版本 副本集搭建流程新建Mongo配置-mongo.conf">
 
 
 
@@ -104,7 +105,7 @@
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -136,7 +137,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-tw">
 
   
   
@@ -184,7 +185,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            首頁
           </a>
         </li>
       
@@ -194,7 +195,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            歸檔
           </a>
         </li>
       
@@ -258,9 +259,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">發表於</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-12T14:17:00+08:00">
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-04-12T14:17:00+08:00">
                 2018-04-12
               </time>
             
@@ -306,6 +307,7 @@
 <li>自动恢复<br># </li>
 </ul>
 <h1 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h1><p>–version 列出Mongo版本</p>
+<h1 id="副本集搭建流程"><a href="#副本集搭建流程" class="headerlink" title="副本集搭建流程"></a>副本集搭建流程</h1><p>新建Mongo配置-mongo.conf </p>
 
       
     </div>
@@ -396,10 +398,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Inhaltsverzeichnis
+            文章目錄
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Übersicht
+            本站概覽
           </li>
         </ul>
       
@@ -419,8 +421,8 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">38</span>
-                  <span class="site-state-item-name">Artikel</span>
+                  <span class="site-state-item-count">44</span>
+                  <span class="site-state-item-name">文章</span>
                 </a>
               </div>
             
@@ -432,8 +434,8 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">9</span>
-                  <span class="site-state-item-name">Tags</span>
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">標籤</span>
                 
               </div>
             
@@ -467,7 +469,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#副本集特征"><span class="nav-number">1.</span> <span class="nav-text">副本集特征</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#命令"><span class="nav-number">2.</span> <span class="nav-text">命令</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#副本集特征"><span class="nav-number">1.</span> <span class="nav-text">副本集特征</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#命令"><span class="nav-number">2.</span> <span class="nav-text">命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#副本集搭建流程"><span class="nav-number">3.</span> <span class="nav-text">副本集搭建流程</span></a></li></ol></div>
             
 
           </div>
@@ -487,7 +489,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -497,7 +499,7 @@
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 強力驅動</div>
 
 
 
@@ -505,7 +507,7 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
+  <div class="theme-info">主題 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
 
 
 

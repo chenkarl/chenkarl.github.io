@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="">
+<html class="theme-next muse use-motion" lang="zh-tw">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -83,6 +83,7 @@
 <meta property="og:title" content="陈玉曌的博客">
 <meta property="og:url" content="http://http://hexo.junyu.pro/page/2/index.html">
 <meta property="og:site_name" content="陈玉曌的博客">
+<meta property="og:locale" content="zh-tw">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="陈玉曌的博客">
 
@@ -100,7 +101,7 @@
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -132,7 +133,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-tw">
 
   
   
@@ -181,7 +182,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            首頁
           </a>
         </li>
       
@@ -191,7 +192,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            歸檔
           </a>
         </li>
       
@@ -214,6 +215,665 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://http://hexo.junyu.pro/2018/09/20/学习笔记/VsCode插件开发/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="陈玉曌">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="陈玉曌的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/20/学习笔记/VsCode插件开发/" itemprop="url">VsCode插件开发</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-09-20T15:44:00+08:00">
+                2018-09-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://http://hexo.junyu.pro/2018/09/12/学习笔记/redis/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="陈玉曌">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="陈玉曌的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/12/学习笔记/redis/" itemprop="url">redis使用笔记</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-09-12T09:44:00+08:00">
+                2018-09-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>set(key,value);<br>set(key,value,’EX’,time);</p>
+<p>EX seconds – Set the specified expire time, in seconds.<br>PX milliseconds – Set the specified expire time, in milliseconds.<br>NX – Only set the key if it does not already exist.<br>XX – Only set the key if it already exist.</p>
+<p>setex(key,ex,value);<br>get(key);<br>del(key);<br>exists(key);</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://http://hexo.junyu.pro/2018/08/21/读书笔记/Javascript设计模式读书笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="陈玉曌">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="陈玉曌的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/21/读书笔记/Javascript设计模式读书笔记/" itemprop="url">JavaScript设计模式读书笔记</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-08-21T10:16:00+08:00">
+                2018-08-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>1、创建型设计模式<br>Constructor 构造器<br>Factory 工厂<br>Abstract 抽象<br>Prototype 原型<br>Singleton 单例<br>Builder 生成器<br>2、结构型设计模式<br>Decorator 装饰者<br>Facade 外观<br>Flyweight 享元<br>Adapter 适配器<br>Proxy 代理<br>3、行为设计模式<br>Iterator 迭代器<br>Mediator 中介者<br>Observer 观察者<br>Visitor  访问者</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://http://hexo.junyu.pro/2018/06/05/随笔/感冒记录/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="陈玉曌">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="陈玉曌的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/05/随笔/感冒记录/" itemprop="url">感冒记录</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-06-05T09:58:00+08:00">
+                2018-06-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>布洛芬缓释胶囊：头痛<br>白加黑：助眠，鼻塞<br>复方双花片：咽喉肿痛<br>对乙酰氨基酚：镇痛<br>盐酸金刚烷胺：抗病毒，抗感染<br>咖啡因：提神</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://http://hexo.junyu.pro/2018/05/24/学习笔记/kali Linux学习笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="陈玉曌">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="陈玉曌的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/24/学习笔记/kali Linux学习笔记/" itemprop="url">Kali Linux 学习笔记</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-05-24T09:44:00+08:00">
+                2018-05-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><ol>
+<li>系统更新<br>apt-get update<br>apt-get upgrade</li>
+<li>开启服务<br>service <em>*</em> start</li>
+<li>安装工具包<br>apt-cache search 软件包名称<br>在软件仓库查找某个软件包名称<br>apt-cache show <strong><em><br>查看软件包详细信息<br>apt-get install </em></strong><br>安装软件包</li>
+</ol>
+<h1 id="常用工具"><a href="#常用工具" class="headerlink" title="常用工具"></a>常用工具</h1><h2 id="信息搜集"><a href="#信息搜集" class="headerlink" title="信息搜集"></a>信息搜集</h2><p>1.dmitry<br>2.dnmap-client<br>3.dnmap-server<br>4.ike-scan<br>5.maltego<br>6.netdiscover<br>7.nmap<br>8.p0f<br>9.recon-ng<br>10.sparta<br>11.zenmap</p>
+<h2 id="漏洞分析"><a href="#漏洞分析" class="headerlink" title="漏洞分析"></a>漏洞分析</h2><p>1.golismero</p>
+<p>2.lynis</p>
+<p>3.Nessus start</p>
+<p>4.Nessus stop</p>
+<p>5.nikto</p>
+<p>6.nmap</p>
+<p>7.sparta</p>
+<p>8.unix-privesc-check</p>
+<h2 id="Web程序"><a href="#Web程序" class="headerlink" title="Web程序"></a>Web程序</h2><p>1.burpsuite</p>
+<p><em>漏洞扫描</em></p>
+<p>2.commix</p>
+<p><em>漏洞测试工具：检测一个请求是否存在命令注入漏洞</em></p>
+<p><a href="https://www.cnblogs.com/ssooking/p/6057514.html" target="_blank" rel="external">使用简介</a></p>
+<p>3.httrack</p>
+<p><em>通过拷贝目标网站，快速构建钓鱼网站</em></p>
+<p><a href="https://www.aliyun.com/jiaocheng/785239.html?spm=5176.100033.2.5.56ed1d11vu6kJE" target="_blank" rel="external">使用简介</a></p>
+<p>4.owasp-zap</p>
+<p><em>集成渗透测试与漏洞挖掘工具</em></p>
+<p><a href="http://www.lybbn.cn/data/datas.php?yw=171" target="_blank" rel="external">使用简介</a></p>
+<p>5.paros</p>
+<p><em>漏洞检测</em></p>
+<p>6.skipfish 2015</p>
+<p>7.sqlmap</p>
+<p><em>sql注入</em></p>
+<p>8.webscarab</p>
+<p><em>请求拦截</em></p>
+<p>9.wpscan</p>
+<p><em>Wordpress的专用扫描器</em></p>
+<p><a href="https://www.jianshu.com/p/a0143cc79215" target="_blank" rel="external">使用简介</a></p>
+<h2 id="数据库评估软件"><a href="#数据库评估软件" class="headerlink" title="数据库评估软件"></a>数据库评估软件</h2><p>1.bbqsql</p>
+<p>2.hexorbase</p>
+<p>3.jSQL Inject</p>
+<p>4.mdb-sql</p>
+<p>5.oscanner</p>
+<p>6.sidgusser</p>
+<p>7.sqldict</p>
+<p>8.SQLite datebase</p>
+<p>9.sqlmap</p>
+<p>10.sqlninja</p>
+<p>11.sqlsus</p>
+<p>12.tnscmd10g</p>
+<h2 id="密码分析"><a href="#密码分析" class="headerlink" title="密码分析"></a>密码分析</h2><p>1.cewl</p>
+<p>2.crunch</p>
+<p>3.hashcat</p>
+<p>4.john</p>
+<p>5.jojnny</p>
+<p>6.medusa</p>
+<p>7.ncrack</p>
+<p>8.ophcrack</p>
+<p>9.pyrit</p>
+<p>10.rainbowcrack</p>
+<p>11.rcracki_mt</p>
+<p>12.wordlists</p>
+<h2 id="无线攻击"><a href="#无线攻击" class="headerlink" title="无线攻击"></a>无线攻击</h2><h2 id="逆向工程"><a href="#逆向工程" class="headerlink" title="逆向工程"></a>逆向工程</h2><h2 id="漏洞利用工具集"><a href="#漏洞利用工具集" class="headerlink" title="漏洞利用工具集"></a>漏洞利用工具集</h2><h2 id="嗅探-欺骗"><a href="#嗅探-欺骗" class="headerlink" title="嗅探/欺骗"></a>嗅探/欺骗</h2><h2 id="权限维持"><a href="#权限维持" class="headerlink" title="权限维持"></a>权限维持</h2><h2 id="数字取证"><a href="#数字取证" class="headerlink" title="数字取证"></a>数字取证</h2><h2 id="报告工具集"><a href="#报告工具集" class="headerlink" title="报告工具集"></a>报告工具集</h2><h2 id="Social-Engineering-Tools-社工工具集"><a href="#Social-Engineering-Tools-社工工具集" class="headerlink" title="Social Engineering Tools 社工工具集"></a>Social Engineering Tools 社工工具集</h2><h2 id="系统服务"><a href="#系统服务" class="headerlink" title="系统服务"></a>系统服务</h2>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -257,9 +917,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">發表於</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-19T11:00:00+08:00">
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-05-19T11:00:00+08:00">
                 2018-05-19
               </time>
             
@@ -377,9 +1037,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">發表於</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-14T13:58:38+08:00">
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-05-14T13:58:38+08:00">
                 2018-05-14
               </time>
             
@@ -506,9 +1166,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">發表於</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-14T09:44:00+08:00">
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-05-14T09:44:00+08:00">
                 2018-05-14
               </time>
             
@@ -568,7 +1228,129 @@
 <h1 id="Egg"><a href="#Egg" class="headerlink" title="Egg"></a>Egg</h1><p>ejs引擎没有增加csrf验证</p>
 <h1 id="Mongoose类型"><a href="#Mongoose类型" class="headerlink" title="Mongoose类型"></a>Mongoose类型</h1><p>ObjectId<br>String<br>Number<br>Date<br>Buffer<br>Boolean</p>
 <p>设默认值 default</p>
+<p>egg 设置代理<br><a href="https://eggjs.org/zh-cn/core/httpclient.html#调试辅助" target="_blank" rel="external">解决方案</a><br>注：最后命令启动 http_proxy=<a href="http://127.0.0.1:8888" target="_blank" rel="external">http://127.0.0.1:8888</a> npm run dev 可写成bat脚本</p>
+<p>curl请求中，中文必须经过encodeURI(keywords)编码后才可以正确传输，否则会变成异常字符</p>
+<p>问题：事件监听，未发生响应事件，请求已经返回<br>node http请求后，里面的事件监听响应如何实现<br>使用promise包装</p>
 
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://http://hexo.junyu.pro/2018/05/11/读书笔记/Python3程序开发指南笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="陈玉曌">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="陈玉曌的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/11/读书笔记/Python3程序开发指南笔记/" itemprop="url">Python3程序开发指南笔记</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-05-11T14:39:00+08:00">
+                2018-05-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
           
         
       
@@ -645,9 +1427,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">發表於</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-11T14:39:00+08:00">
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-05-11T14:39:00+08:00">
                 2018-05-11
               </time>
             
@@ -725,784 +1507,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://http://hexo.junyu.pro/2018/05/10/读书笔记/图说区块链阅读笔记/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="陈玉曌">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="陈玉曌的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/10/读书笔记/图说区块链阅读笔记/" itemprop="url">图说区块链阅读笔记</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-10T10:04:36+08:00">
-                2018-05-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>互联网实现信息转移与信息共享<br>区块链实现价值转移<br>信任<br>认证<br>创意<br>凡是有价值的东西，都可以使用区块链技术进行价值共享<br>票，卡，券等都可以抽象成区块</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://http://hexo.junyu.pro/2018/04/20/随笔/随笔/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="陈玉曌">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="陈玉曌的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/20/随笔/随笔/" itemprop="url">随笔</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-20T20:55:00+08:00">
-                2018-04-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>1、贸易战<br>美国与中国<br>美国优势在于技术先进，会限制芯片出口，所以中国的芯片将会发展。</p>
-<p>中国劳动力价格低廉，因此美国的手工或者轻工业制品将会收益。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://http://hexo.junyu.pro/2018/04/19/学习笔记/微信小程序学习笔记/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="陈玉曌">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="陈玉曌的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/19/学习笔记/微信小程序学习笔记/" itemprop="url">微信小程序学习笔记</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-19T22:42:00+08:00">
-                2018-04-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>.json 后缀的 JSON 配置文件<br>.wxml 后缀的 WXML 模板文件<br>.wxss 后缀的 WXSS 样式文件<br>.js 后缀的 JS 脚本逻辑文件</p>
-<p>问题：<br>1、初始化地图中心</p>
-<p>2、view容器的hover-class属性：<a href="https://developers.weixin.qq.com/ebook?action=get_post_info&amp;docid=000224fc9d0f98cb0086f4eff5180a&amp;highline=hover-class" target="_blank" rel="external">描述</a></p>
-<p>3、scroll-view组件使用</p>
-<p>4、</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://http://hexo.junyu.pro/2018/04/19/读书笔记/Go语言实战读书笔记/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="陈玉曌">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="陈玉曌的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/19/读书笔记/Go语言实战读书笔记/" itemprop="url">Go语言实战读书笔记</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-19T22:17:00+08:00">
-                2018-04-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="https://github.com/goinaction/code" target="_blank" rel="external">书籍源码</a></p>
-<h1 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h1><p>1、解决的问题<br>1.1 开发速度<br>1.2 并发<br>goroutine 类似线程<br>通道（channel）内置的数据结构，可以让用户在不同goroutine同步发送具有类型的消息。<br>编程模型倾向在goroutine间发送消息，而不是让多个goroutine争夺同一个数据的控制权。</p>
-<p>1.3 类型系统<br>类型简单<br>接口对行为建模-鸭子类型<br>接口作为代码复用的基本模块</p>
-<p>1.4<br>内存管理</p>
-<p>2、核心概念</p>
-<h1 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h1><p>1、特性</p>
-<h1 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h1><p>1、打包<br>2、工具链<br>go run<br>go build<br>go get<br>go vet 检查常见错误<br>go fmt 格式化源代码<br>go doc 查看文档 命令行查看文档<br>godoc -http=:6060 浏览器查看文档</p>
-<h1 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h1><p>1、数组<br>使用指针在函数间传递大数组<br>2、切片<br>指针、长度、容量<br>3、映射<br>存储一系列无序的键值对<br>散列函数</p>
-<p>都是由数组构成</p>
-<p>小结</p>
-<h1 id="第五章-类型系统"><a href="#第五章-类型系统" class="headerlink" title="第五章 类型系统"></a>第五章 类型系统</h1><p>1、结构体<br>2、具名类型</p>
-<p>内置类型<br>数值，字符串，布尔<br>引用类型<br>切片，映射，通道，接口，函数</p>
-<p>原始类型，类型是原始的，类型增加值是创建新值<br>非原始，类型增加值是修改当前值<br>3、接口</p>
-<p>方法集：定义了一组关联到给定类型的值或指针的方法</p>
-<p>因为不能总是获取到一个值的地址，所以值的方法集只包括了使用值接收者实现的方法</p>
-<p>4、类型嵌套</p>
-<h1 id="第六章-调度器、并发、通道"><a href="#第六章-调度器、并发、通道" class="headerlink" title="第六章 调度器、并发、通道"></a>第六章 调度器、并发、通道</h1><p>1、并发指goroutine运行的时候是相互独立的.<br>2、关键字 go 创建goroutine 来运行函数<br>3、goroutine 在逻辑处理器上运行，逻辑处理器具有独立的系统线程和运行队列<br>4、竞争状态是指两个或多个goroutine试图访问同一个资源<br>5、防止出现竞争状态：原子函数、互斥锁<br>6、通道：两个goroutine直接共享数据<br>7、无缓冲通道保证同时交换数据，有缓冲无此保证</p>
-<h1 id="第七章-并发模式"><a href="#第七章-并发模式" class="headerlink" title="第七章 并发模式"></a>第七章 并发模式</h1><p>1、</p>
-<h1 id="第八章-标准库"><a href="#第八章-标准库" class="headerlink" title="第八章 标准库"></a>第八章 标准库</h1><p>1、log<br>2、json<br>3、io</p>
-<h1 id="第九章-单元测试"><a href="#第九章-单元测试" class="headerlink" title="第九章 单元测试"></a>第九章 单元测试</h1><p>1、go test -v</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://http://hexo.junyu.pro/2018/04/19/读书笔记/编程珠玑读书笔记/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="陈玉曌">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="陈玉曌的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/19/读书笔记/编程珠玑读书笔记/" itemprop="url">编程珠玑读书笔记</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-19T22:17:00+08:00">
-                2018-04-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>1、问题：<br>给定一个最多包含40亿个随机排列的 32位整数 的顺序文件，找出一个不在文件中的32位整数。<br>情景1：具有足够内存</p>
-<p>情景2：有几个外部的临时文件，但仅有几百字节的内存</p>
-<p>2、问题：<br>将一个n元一维向量向左 循环移位 i个位置。<br>例:n=8,i=3时，向量abcdefgh=&gt;defghabc<br>简单方法：一个n元中间变量在n步完成；<br>情景：使用数十个额外字节的存储空间，在正比于n的时间内完成向量的旋转。</p>
-<p>3、给定一个英语字典，找出其中的所有变位词集合。<br>例：post\pots\tops</p>
-<p>答：标识字典中的每一个词，然后将所有标识一致的词集中到一起。</p>
-<p>(1)基于字母表顺序排列，例中的标识为opst<br>(2)将所有单词按照标识顺序排列</p>
-<p>二分搜索 必要条件：有序表</p>
-<p>基本操作</p>
-<p>格式化信函</p>
-<p>多重判断循环代替</p>
-<p>结构话数据</p>
-<p>发明家悖论：更一般性的问题也许更容易解决<br>意味着直接编写解决23种情况的问题很难；而编写一个处理n种情况的通用程序，再令n=23得到最终结果却相对比较容易</p>
-<p>在节省空间无计可施时，将自己从代码中解脱出来，退回起点研究数据，往往会有效。数据的表现形式时程序设计的根本。<br>原则：<br>(1)使用数组重新编写重复代码。<br>(2)封装复杂结构。当需要非常复杂的数据结构时，使用抽象术语进行定义并将操作封装为类。<br>(3)尽可能使用高级工具<br>(4)从数据得出程序的结构。</p>
-<pre><code>编写正确的程序
-1、二分搜索
-l=0;u=n-1
-loop
-{ mustbe(1,u)}
-if l&gt;u
-    p=-1 ;break;
-m=(1+u)/2
-case 
-    x[m]&lt; t : l=m+l
-    x[m]= t : p=m ; break
-    x[m]&gt; t : u=m-1
-</code></pre><p>原理<br>1、断言<br>输入、程序变量和输出之间的关系勾勒出了程序的状态<br>2、顺序控制结构<br>3、选择控制结构<br>4、迭代控制结构<br>初始化，保持，终止<br>5、函数</p>
-<p>断言完成契约式编程，保证代码质量</p>
-<h1 id="性能"><a href="#性能" class="headerlink" title="性能"></a>性能</h1><h2 id="程序性能分析"><a href="#程序性能分析" class="headerlink" title="程序性能分析"></a>程序性能分析</h2><p>1、算法和数据结构<br>树的时间复杂度 nlog(n)<br>2、算法调优<br>3、数据结构重组<br>4、代码调优<br>5、硬件</p>
-<p>设计层面<br>问题定义、系统结构、算法和数据结构、代码调优、系统软件、硬件</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://http://hexo.junyu.pro/2018/04/19/随笔/2018年目标/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="陈玉曌">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="陈玉曌的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/19/随笔/2018年目标/" itemprop="url">2018年目标及计划</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-19T22:17:00+08:00">
-                2018-04-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>学习任务<br>1、go语言<br>2、docker<br>3、redis<br>4、微信小程序</p>
-<p>读书任务<br>1、编程珠玑 预计1周，五一前读完。<br>2、HeadFirst设计模式<br>3、啊哈算法<br>4、</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1548,8 +1557,8 @@ case
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">38</span>
-                  <span class="site-state-item-name">Artikel</span>
+                  <span class="site-state-item-count">44</span>
+                  <span class="site-state-item-name">文章</span>
                 </a>
               </div>
             
@@ -1561,8 +1570,8 @@ case
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">9</span>
-                  <span class="site-state-item-name">Tags</span>
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">標籤</span>
                 
               </div>
             
@@ -1600,7 +1609,7 @@ case
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -1610,7 +1619,7 @@ case
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 強力驅動</div>
 
 
 
@@ -1618,7 +1627,7 @@ case
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
+  <div class="theme-info">主題 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
 
 
 
