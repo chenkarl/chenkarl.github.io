@@ -84,3 +84,14 @@ Buffer
 Boolean
 
 设默认值 default
+
+egg 设置代理
+[解决方案](https://eggjs.org/zh-cn/core/httpclient.html#调试辅助)
+注：最后命令启动 http_proxy=http://127.0.0.1:8888 npm run dev 可写成bat脚本
+
+curl请求中，中文必须经过encodeURI(keywords)编码后才可以正确传输，否则会变成异常字符
+
+问题：事件监听，未发生响应事件，请求已经返回
+node http请求后，里面的事件监听响应如何实现
+使用promise包装
+

@@ -15,6 +15,6 @@ tags:
 # 命令
 --version 列出Mongo版本
 
+# 副本集搭建流程
 
-
-
+新建Mongo配置-mongo.conf 

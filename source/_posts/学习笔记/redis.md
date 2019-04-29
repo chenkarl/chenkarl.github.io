@@ -16,3 +16,4 @@ setex(key,ex,value);
 get(key);
 del(key);
 exists(key);
+
